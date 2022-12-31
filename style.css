@@ -1,0 +1,219 @@
+
+/*
+	适用于 Djot 中文文档的 CSS
+
+	由 BobYang 设计。
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans+SC:wght@500;700&family=Noto+Serif+SC:wght@500;700&display=swap');
+
+/*
+	将页面设置为容器并设置边距 8px
+*/
+html {
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+
+	padding: 8px;
+}
+
+/*
+	容器，将内容置中对齐并设置字体等
+*/
+body {
+	background-color: #F8F8F8;
+	color: #242424;
+	font-family: 'Noto Serif SC', 宋体, serif;
+	/* font-family: 'Noto Sans SC', sans-serif;*/
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.8px;
+	line-height: 1.35;
+	margin: 60px auto;
+	max-width: 800px;
+}
+
+/*
+	标题
+*/
+h1, h2, h3, h4, h5, h6 {
+	border-bottom: 1px solid #CCCCCC;
+	font-family: 'Noto Serif SC', 宋体, serif;
+	font-weight: 700;
+	line-height: 1;
+	margin-top: 12px;
+	margin-bottom: 8px;
+}
+
+h1:before {color: #DDDDDD; content: '# '; font-size: 24px;}
+h2:before {color: #DDDDDD; content: '## '; font-size: 20px;}
+h3:before {color: #DDDDDD; content: '### '; font-size: 16px;}
+h4:before {color: #DDDDDD; content: '#### '; font-size: 12px;}
+h5:before {color: #DDDDDD; content: '##### '; font-size: 12px;}
+
+/*
+	标题缩进
+*/
+h1 + div,
+h2 + div,
+h3 + div,
+h4 + div,
+h5 + div,
+h6 + div {
+	border-left: 0px solid #EEEEEE;
+	margin-left: 8px;
+	padding: 8px;
+	transition: 0.2s;
+}
+
+/*
+	链接
+*/
+a {
+	color: inherit;
+}
+
+a:hover {
+	text-shadow: 0 1px 2px #CCCCCC;
+}
+
+/*
+	分隔线
+*/
+hr {
+	border: 0;
+}
+
+hr:before {	
+	background-color: inherit;
+	border-bottom: 1px solid #DDDDDD;
+	content: '';
+	display: block;
+	margin: 4px 24px;
+}
+
+/*
+	代码块容器
+*/
+pre {
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+
+	background-color: #F4F4F4;
+	overflow-x: auto;
+	padding: 12px;
+}
+
+/*
+	代码块
+*/
+code {
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+
+	display: block;
+	font-family: 'Inconsolata', Consolas, 'Noto Sans SC', monospace;
+	font-size: 14px;
+	margin: 4px;
+	scrollbar-width: thin;
+	overflow-y: auto;
+}
+
+sub {
+	font-size: 10px;
+}
+
+/*
+	代码的滚动条
+*/
+code::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+/*
+	页脚
+*/
+footer {
+	color: #ABABAB;
+	font-size: 12px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/*
+	小贴士
+*/
+.tips {
+	background: #F4F4F4;
+	cursor: pointer;
+	display: block;
+	max-width: 200px;
+	opacity: 0.2;
+	padding: 12px;
+	transition: 0.4s;
+
+	position: fixed;
+	top: 8px;
+	right: 8px;
+}
+
+.tips:hover {
+	box-shadow: 0 4px 16px #DEDEDE;
+	opacity: 0.8;
+	padding: 24px;
+}
+
+.tips:hover .tips-content {
+	font-size: 16px;
+	opacity: 0.8;
+	margin: 0;
+	padding: 12px;
+}
+
+.tips-content {
+	-webkit-text-size-adjust: none;
+	font-size: 8px;
+	padding: 0;
+	transition: 0.4s;
+}
+
+/*
+	双栏代码块
+*/
+.code {
+	box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+
+	background-color: #F4F4F4;
+	padding: 0;
+}
+
+.code:before,
+.code:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+.code pre {
+	float: left;
+	height: 180px;
+	width: 50%;
+}
+
+.code pre code {
+	display: block;
+	height: 130px;
+	overflow: auto;
+}
+
+.code pre:nth-child(1) {
+	border-right: 1px solid #DDDDDD;
+}
+
+.code div {
+	color: #888888;
+	font-family: 'Inconsolata', Consolas, monospace;
+	font-size: 10px;
+}
