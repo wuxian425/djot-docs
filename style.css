@@ -15,6 +15,12 @@ html {
 		-webkit-box-sizing: border-box;
 
 	padding: 8px;
+	scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
 }
 
 /*
@@ -27,8 +33,8 @@ body {
 	/* font-family: 'Noto Sans SC', sans-serif;*/
 	font-size: 16px;
 	font-weight: 400;
-	letter-spacing: 0.8px;
-	line-height: 1.35;
+	letter-spacing: 1.05px;
+	line-height: 1.45;
 	margin: 60px auto;
 	max-width: 800px;
 }
@@ -37,12 +43,12 @@ body {
 	标题
 */
 h1, h2, h3, h4, h5, h6 {
-	border-bottom: 1px solid #CCCCCC;
+	border-bottom: 1px solid #E2E2E2;
 	font-family: 'Noto Serif SC', 宋体, serif;
 	font-weight: 700;
 	line-height: 1;
-	margin-top: 12px;
-	margin-bottom: 8px;
+	margin-top: 32px;
+	margin-bottom: 24px;
 }
 
 h1:before {color: #DDDDDD; content: '# '; font-size: 24px;}
@@ -62,7 +68,7 @@ h5 + div,
 h6 + div {
 	border-left: 0px solid #EEEEEE;
 	margin-left: 8px;
-	padding: 8px;
+	padding: 0;
 	transition: 0.2s;
 }
 
@@ -70,11 +76,13 @@ h6 + div {
 	链接
 */
 a {
-	color: inherit;
+	color: #404050;
+	text-decoration: none;
 }
 
 a:hover {
 	text-shadow: 0 1px 2px #CCCCCC;
+	text-decoration: underline;
 }
 
 /*
@@ -142,6 +150,30 @@ footer {
 }
 
 /*
+	目錄
+*/
+@media (min-width: 1520px) {
+	.index {
+		background-color: inherit;
+		width: 320px;
+		overflow-y: auto;
+		padding: 20px;
+		scrollbar-width: thin;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.index::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+}
+
+
+/*
 	小贴士
 */
 .tips {
@@ -160,12 +192,13 @@ footer {
 
 .tips:hover {
 	box-shadow: 0 4px 16px #DEDEDE;
+	max-width: 240px;
 	opacity: 0.8;
-	padding: 24px;
+	padding: 16px;
 }
 
 .tips:hover .tips-content {
-	font-size: 16px;
+	font-size: 18px;
 	opacity: 0.8;
 	margin: 0;
 	padding: 12px;
