@@ -2,16 +2,9 @@
 <html>
 	<head>
 		<title>Djot 中文文档</title>
-		<link href="./style.css" rel="stylesheet" />
+		<link href="./typo.less.css" rel="stylesheet" />
 	</head>
-	<body>
-		<div class="tips">
-			<b>小贴士</b>
-			<div class="tips-content">
-				您可以透过浏览器的页面搜索功能（大多数浏览器可单击 F3 或击下 Control + F 键开启）来快速查找页面内容。
-			</div>
-		</div>
-
+	<body class="typo">
 		<h1>Djot 中文文档</h1>
 		<p>
 			Djot (/dʒɑt/) 是一种由 John MacFarlane 教授创造的轻型标记语法。 它从 <a href="http://commonmark.org/">CommonMark</a> 中派生出大部分的功能，不过它修复了一些让 CommonMark 语法复杂且难以有效解析的问题，并且它的功能也比 CommonMark 更加全面，支持定义列表、脚注、表格、一些新的内联格式（如插入、删除、突出显示、上标、下标等）、数学、智能标点符号、可应用在任何属性的元素，以及用于块级、内联及原始内容的通用容器。该项目最初是为了实现 John MacFarlane 教授在 <a href="http://johnmacfarlane.net/beyond-markdown.html">Beyond Markdown</a> 中提出的一些想法。
@@ -1245,10 +1238,10 @@ Don't forget to turn off the water!
 
 
 
-		<h2><a name="快速开始">给 Markdown 用户的快速开始</a></h2>
+		<h2 id="快速開始">给 Markdown 用户的快速开始</h2>
 		<div>
 			<p>Djot 和 Markdown 非常相似，以下是你从 Markdown 过渡到 Djot 时要注意的一些重要差异。（译者注：你可以使用<a href="http://djot.net/playground">在线体验</a>来了解差异！）</p>
-			<h3 name="快速开始.空行">空行</h3>
+			<h3 id="快速开始.空行">空行</h3>
 			<div>
 				<p>在 Djot 中，你需要在块级元素的周围留空一行，如下：</p>
 
@@ -1277,7 +1270,7 @@ local foo = bar.baz or false
 				<p>引用块（即使你要嵌套引用块也必须空一行！）、下划线等也都属于块级元素。</p>
 			</div>
 
-			<h3 name="快速开始.列表">列表</h3>
+			<h3 id="快速开始.列表">列表</h3>
 			<div>
 				<p>一个特别的地方在于：列表前你也需要一个空行，即便它是一个子项。</p>
 				<div class="code">			
@@ -1291,7 +1284,7 @@ local foo = bar.baz or false
 				</div>
 			</div>
 
-			<h3 name="快速开始.标题">标题</h3>
+			<h3 id="快速开始.标题">标题</h3>
 			<div>
 				<p>在 Djot 中没有 Setext 样式的标题写法（带下划线），只有 ATX （前面带「#」）的样式。</p>
 				<p>标题内容可以延伸到多行，并且前面可以没有「#」（这是标题后面必须留空一行的原因！）。</p>
@@ -1306,7 +1299,7 @@ level-3 heading</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.代码块">代码块</h3>
+			<h3 id="快速开始.代码块">代码块</h3>
 			<div>
 				<p>没有缩进的代码块，只有「```」。</p>
 				<div class="code">			
@@ -1322,7 +1315,7 @@ level-3 heading</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.引用">引用</h3>
+			<h3 id="快速开始.引用">引用</h3>
 			<div>
 				<p>引用的「>」后面需要一个空格，再接上内容。</p>
 			</div>
@@ -1341,7 +1334,7 @@ _*Italic Bold*_ / *_Italic Bold_*</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.链接">链接</h3>
+			<h3 id="快速开始.链接">链接</h3>
 			<div>
 				<p>没有为链接添加标题的特殊语法，你需要使用通用属性。</p>
 				<div class="code">			
@@ -1351,7 +1344,7 @@ _*Italic Bold*_ / *_Italic Bold_*</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.强制换行符">强制换行符</h3>
+			<h3 id="快速开始.强制换行符">强制换行符</h3>
 			<div>
 				<p>在 Djot 中，你需要在换行符之前使用反斜杠，而不是敲两下空白键。</p>
 				<div class="code">			
@@ -1362,7 +1355,7 @@ line.</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.原始HTML">插入原始 HTML 代码</h3>
+			<h3 id="快速开始.原始HTML">插入原始 HTML 代码</h3>
 			<div>
 				<p>在 Djot 中，你需要将其标记为原始 HTML，而不是把 Djot 文件当 HTML 文件写。</p>
 				<div class="code">			
@@ -1377,7 +1370,7 @@ line.</code></pre>
 				</div>
 			</div>
 
-			<h3 name="快速开始.表格">表格</h3>
+			<h3 id="快速开始.表格">表格</h3>
 			<div>
 				<p>和许多 Markdown 实现（如：CommonMark）不同，表格在每行开头和结尾都需要一个「|」字符。</p>
 				<div class="code">			
